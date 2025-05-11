@@ -20,7 +20,7 @@ tokio = ["accesskit_unix/tokio"]
 
 [dependencies]
 accesskit = { version = "0.18.0", path = "../../common" }
-winit = { version = "0.30.5", default-features = false }
+winit = { git = "https://github.com/Kafva/winit", branch = "devel" }
 rwh_05 = { package = "raw-window-handle", version = "0.5", features = ["std"], optional = true }
 rwh_06 = { package = "raw-window-handle", version = "0.6.2", features = ["std"], optional = true }
 
@@ -37,6 +37,7 @@ accesskit_unix = { version = "0.14.0", path = "../unix", optional = true, defaul
 accesskit_android = { version = "0.1.0", path = "../android", optional = true, features = ["embedded-dex"] }
 
 [dev-dependencies.winit]
-version = "0.30.5"
+git = "https://github.com/Kafva/winit"
+branch = "devel"
 default-features = false
 features = ["x11", "wayland", "wayland-dlopen", "wayland-csd-adwaita"]
